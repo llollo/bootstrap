@@ -1,13 +1,13 @@
 // jscs:disable requireCamelCaseOrUpperCaseIdentifiers
 
 var browsers = {
-  safariMac: {
+  /*safariMac: {
     base: 'BrowserStack',
     os: 'OS X',
     os_version: 'Yosemite',
     browser: 'Safari',
     browser_version: '8.0'
-  },
+  },*/
   chromeMac: {
     base: 'BrowserStack',
     os: 'OS X',
@@ -15,7 +15,7 @@ var browsers = {
     browser : 'Chrome',
     browser_version : 'latest'
   },
-  firefoxMac: {
+  /*firefoxMac: {
     base: 'BrowserStack',
     os: 'OS X',
     os_version: 'Yosemite',
@@ -50,13 +50,6 @@ var browsers = {
     browser: 'IE',
     browser_version: '8.0'
   },
-  ie7WinXP: {
-    base: 'BrowserStack',
-    os: 'Windows',
-    os_version: 'XP',
-    browser: 'IE',
-    browser_version: '7.0'
-  },
   'chromeWin8.1': {
     base: 'BrowserStack',
     os: 'Windows',
@@ -70,21 +63,21 @@ var browsers = {
     os_version: '8.1',
     browser: 'Firefox',
     browser_version: 'latest'
-  },
+  },*/
   iphone6: {
     base: 'BrowserStack',
     os: 'ios',
     os_version: '11.2',
     device: 'iPhone 6',
     real_mobile: true
-  },
+  }/*,
   nexus5: {
     base: 'BrowserStack',
     os: 'android',
     os_version: '4.4',
     device: 'Google Nexus 5',
     real_mobile: true
-  }
+  }*/
 };
 
 module.exports = {

@@ -34,7 +34,10 @@ $(function () {
 
   QUnit.test('should exit early if element is not visible', function (assert) {
     assert.expect(1)
-    var $affix = $('<div style="display: none"/>').bootstrapAffix()
+    var $affix = $('<div style="display: none"/>')
+      .appendTo('#qunit-fixture')
+      .bootstrapAffix()
+
     $affix.data('bs.affix').checkPosition()
     assert.ok(!$affix.hasClass('affix'), 'affix class was not added')
   })
@@ -65,13 +68,11 @@ $(function () {
         done()
       })
 
+    window.scroll(0, document.body.scrollHeight)
+    // for testing in a browser
     setTimeout(function () {
-      window.scrollTo(0, document.body.scrollHeight)
-
-      setTimeout(function () {
-        window.scroll(0, 0)
-      }, 16) // for testing in a browser
-    }, 0)
+      window.scroll(0, 0)
+    }, 16)
   })
 
   QUnit.test('should affix-top when scrolling up to offset when parent has padding', function (assert) {
@@ -97,7 +98,7 @@ $(function () {
       })
 
     setTimeout(function () {
-      window.scrollTo(0, document.body.scrollHeight)
+      window.scroll(0, document.body.scrollHeight)
 
       setTimeout(function () {
         window.scroll(0, 119)
