@@ -217,7 +217,6 @@
 
     if (!$target.hasClass('carousel')) return
 
-    if (!$target.hasClass('carousel')) return
     var options = $.extend({}, $target.data(), $this.data())
     var slideIndex = $this.attr('data-slide-to')
     if (slideIndex) options.interval = false
